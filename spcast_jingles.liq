@@ -50,8 +50,5 @@ jingles = single("/home/spcast/SPCast/jingles/files/jingles.mp3")
 # Create a source that plays the file once
 radio = once(jingles)
 
-# Include Radiodetails
-%include "jingles_radiodata.liq"
-
-# Include Credentials
-%include "jingles_credentials.liq"
+# Include Data
+%include "news_modus.liq"
