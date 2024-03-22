@@ -35,20 +35,5 @@ settings.frame.audio.channels.set(2) # Set the number of audio channels for the 
 # Metadata Configuration for Encoders
 settings.encoder.metadata.export.set(["artist", "title", "album", "genre", "date", "tracknumber", "comment", "track", "year", "dj", "next", "apic", "metadata_block_picture", "coverart"])
 
-# See: https://liquidsoap.readthedocs.io/en/latest/content/cookbook.html
-# local file
-jingles = single("/home/spcast/SPCast/jingles/files/jingles.mp3")
-
-# This function creates a fading transition between two sources, a and b. 
-#def fading_transition(a,b)
-#	sequence([fade.out(a.source),fade.in(b.source)])
-#end
-
-# This line creates a crossfading transition between the jingles source and the fading_transition function. 
-#jingles_fade = cross(fading_transition, jingles)
-
-# Create a source that plays the file once
-radio = once(jingles)
-
 # Include Data
-%include "news_modus.liq"
+%include "jingles_modus.liq"
