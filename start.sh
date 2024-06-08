@@ -4,7 +4,7 @@
 pkill -f aotonhwwouqvhw
 
 # Remove Logfiles
-rm -f /home/spcast/SPCast/jingles/logs/*.log*
+find /home/spcast/SPCast/jingles/logs/ -name "*.log*" -type f -mtime +3 -exec rm -f {} \;
 
 # Set permissions
 chmod +x spcast_jingles.liq
